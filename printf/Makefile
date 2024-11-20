@@ -1,7 +1,7 @@
 
 NAME = libftprintf.a
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = ft_printf.c ft_strlen.c ft_putstr.c ft_case_p_u.c ft_case_xx.c ft_putchar.c ft_putnbr.c ft_putstr_rev.c
@@ -15,7 +15,6 @@ all: $(NAME)
 $(NAME): $(OFILE)
 	ar rcs $(NAME) $(OFILE)
 
-
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
@@ -25,7 +24,6 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-
 
 re: fclean $(NAME)
 

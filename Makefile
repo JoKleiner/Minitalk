@@ -1,8 +1,9 @@
+
 SERVER_SRCS	= server.c 
 CLIENT_SRCS	= client.c
 LIBFT_SRCS  = libft/ft_atoi.c
 
-CC			= gcc
+CC			= cc
 CC_FLAGS	= -Wall -Werror -Wextra
 
 PRINTF_DIR  = printf
@@ -11,7 +12,9 @@ LIBFT_DIR   = libft
 SERVER_OBJS	= ${SERVER_SRCS:.c=.o} libft/ft_atoi.o ${PRINTF_DIR}/libftprintf.a
 CLIENT_OBJS	= ${CLIENT_SRCS:.c=.o} libft/ft_atoi.o ${PRINTF_DIR}/libftprintf.a
 
-all: printf server client
+NAME		= printf server client
+
+all: $(NAME) 
 
 printf:
 	@make -C ${PRINTF_DIR}
