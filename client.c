@@ -6,13 +6,13 @@
 /*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:02:01 by joklein           #+#    #+#             */
-/*   Updated: 2024/11/20 10:50:06 by joklein          ###   ########.fr       */
+/*   Updated: 2024/11/20 11:51:49 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	handler(int pid, int cha)
+void	cha_to_bit_send(int pid, int cha)
 {
 	int	i;
 	int	result;
@@ -48,7 +48,7 @@ int	main(int argc, char **argv)
 	}
 	while (argv[2][i])
 	{
-		handler(pid, argv[2][i]);
+		cha_to_bit_send(pid, argv[2][i]);
 		i++;
 	}
 	return (0);
