@@ -6,14 +6,11 @@
 /*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:28:36 by joklein           #+#    #+#             */
-/*   Updated: 2024/11/19 19:36:24 by joklein          ###   ########.fr       */
+/*   Updated: 2024/11/20 10:09:42 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "minitalk.h"
 
 int		g_count;
 
@@ -26,7 +23,7 @@ void	handler(int signum)
 	else if (signum == SIGUSR2)
 		cha = (cha << 1) | 1;
 	g_count++;
-	if (g_count == 7)
+	if (g_count == 8)
 	{
 		write(1, &cha, 1);
 		cha = 0;
@@ -38,13 +35,13 @@ int	main(void)
 {
 	signal(SIGUSR1, handler);
 	signal(SIGUSR2, handler);
-	printf("Server started. PID: %d\n", getpid());
+	ft_printf("Server started. PID: %d\n", getpid());
 	while (1)
 		pause();
 	return (0);
 }
 
-// signal
+// signal		1
 // sigemptyset
 // sigaddset
 // sigaction
@@ -52,5 +49,5 @@ int	main(void)
 // getpid		1
 // pause		1
 // sleep
-// usleep
+// usleep		1
 // exit
