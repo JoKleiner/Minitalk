@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 17:02:01 by joklein           #+#    #+#             */
-/*   Updated: 2024/11/20 11:51:49 by joklein          ###   ########.fr       */
+/*   Updated: 2025/02/26 12:01:57 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ int	main(int argc, char **argv)
 	int	i;
 	int	pid;
 
+	if (argc == 1)
+	{
+		ft_printf("Start the client like this: ./client PID_NUM MASSAGE\n");
+		return (1);
+	}
 	if (argc != 3)
 	{
 		ft_printf("Wrong input\n");

@@ -6,7 +6,7 @@
 /*   By: joklein <joklein@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:28:36 by joklein           #+#    #+#             */
-/*   Updated: 2024/11/20 11:50:28 by joklein          ###   ########.fr       */
+/*   Updated: 2025/04/10 11:44:44 by joklein          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	bits_to_char(int sig_bit)
 
 	if (sig_bit == SIGUSR1)
 		cha = (cha << 1) | 0;
-	else if (sig_bit == SIGUSR2)
+	if (sig_bit == SIGUSR2)
 		cha = (cha << 1) | 1;
 	bit_count++;
 	if (bit_count == 8)
