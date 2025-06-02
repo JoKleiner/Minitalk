@@ -15,7 +15,7 @@ First, run the server:
 It will print its PID (process ID).<br/>
 Then run the client with the server’s PID and your message:
 
-  ./client <server_pid> "your message here"
+    ./client <server_pid> "your message here"
 
 **Example:**
 
