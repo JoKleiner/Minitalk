@@ -2,7 +2,7 @@
 **About:**<br/>
 minitalk is a small program to send messages between two processes using Unix signals in C.<br/>
 The goal is to learn how to use kill(), signal(), and how to send data bit by bit between a client and a server process.<br/>
-<br/><br/>
+<br/>
 **Compile:**
 
   make
