@@ -19,4 +19,10 @@ Then run the client with the server’s PID and your message:
 
 **Example:**
 
-  ./client 12345 "Hello, World!"
+    ./client 12345 "Hello, World!"
+
+**What I Learned:**<br/>
+Using Unix signals (SIGUSR1, SIGUSR2) for communication<br/>
+Converting characters to bits and sending them one by one<br/>
+Process synchronization with signals<br/>
+Handling edge cases in inter-process communication<br/>
