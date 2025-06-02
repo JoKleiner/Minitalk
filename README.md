@@ -5,12 +5,12 @@ The goal is to learn how to use kill(), signal(), and how to send data bit by bi
 <br/>
 **Compile:**
 
-  make
+    make
 
 **Usage:**<br/>
 First, run the server:
 
-  ./server
+    ./server
 
 It will print its PID (process ID).<br/>
 Then run the client with the server’s PID and your message:
